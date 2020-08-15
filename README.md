@@ -61,7 +61,7 @@ avesAmigas.remove(exAmigo)
 
 ### Cómo te habrás dado cuenta los mensajes entre ambos lenguajes son muy similares (por no decir iguales) acá podés chusmear algunos:
 - ``clear()``  Para borrar todos elementos de la lista.
-- ```size``` Devuelve el tamaño de la lista.
+- ```size``` Devuelve el tamaño de la lista aunque esto no es una funcion, es un atributo de las listas por eso va sin parentesis. Similar a esto es el atributo ```length``` en los strings.
 - ```isEmpty()``` Pregunta si está vacía.
 - ```contains(element)``` Pregunta contiene un elemento por parámetro.
 - ```max()``` Devuelve el valor máximo. Por ende también ```min()``` que hace lo mismo pero al revés.
