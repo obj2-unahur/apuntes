@@ -17,7 +17,6 @@ Podés pensar esto como algo similar a lo que en Wollok hacías con ```const``` 
 ### Ejecutar una acción sobre todos los elementos de la colección: Por ejemplo, cómo se viene el cumple de Pepita (y como la cuarentena no rige para las aves) todas sus amigas están planeando ir hasta su casa.
 
 En Wollok se hacía así ¿Te acordás?
-
 ```wollok
 avesAmigas.forEach({ aveAmiga => aveAmiga.volarHastaLoDePepita()}) 
 ```
@@ -36,9 +35,12 @@ Como ves, existe una palabra reservada ```it``` que nos quita la necesidad de ha
 
 
 ### Agregar un elemento: Cómo pepita es un ser muy social siempre está haciendo amigos.
+**Wollok**
 ``` wollok
 avesAmigas.add(nuevoAmigo)
 ```
+
+**Kotlin**
 ``` kotlin
 avesAmigas.add(nuevoAmigo)
 ```
@@ -46,10 +48,12 @@ avesAmigas.add(nuevoAmigo)
 
 ### Eliminar un elemento: Si bien la idea era que todos vayan a la fiesta hubo aves que no pudieron asistir y como pepita es bastante particular dijo (en idioma pepita claro) "El que no vino a mi cumpleaños es porque no es mi amigo".
 
+**Wollok**
 ``` wollok
 avesAmigas.remove(exAmigo)
 ```
 
+**Kotlin**
 ``` kotlin
 avesAmigas.remove(exAmigo)
 ```
