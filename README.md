@@ -7,19 +7,18 @@ Antes de empezar cabe destacar que a diferenca de Wollok dónde teniamos tres ti
  * **mutables:** que permiten un mayor dinamismo sobre las colecciones permitiendo modificar los elementos de su interior (agregar, remover, actualizar).
 
 ## Cosas que se puenden hacer con las colecciones:
-### Ejecutar una accion sobre todos los elementos de la colección: Por ejemplo
+### Ejecutar una accion sobre todos los elementos de la colección: Por ejemplo cómo se viene el cumple de Pepita todas sus amigas aves tienen que ir hasta su casa.
 
 En Wollok se hacía así te acordás?
 ```wollok
-profesores.forEach({ profesor => profesor.darClases()}) 
+avesAmigas.forEach({ aveAmiga => aveAmiga.volarHataLoDePepita()}) 
 ```
 
 En cambio en Kotlin...
-
 ``` kotlin
-profesores.forEach({ profesor -> profesor.darClases()}) 
+avesAmigas.forEach({ aveAmiga -> aveAmiga.volarHataLoDePepita()}) 
 ```
-No hay mucha diferencia en vez de usar  **=>**  usa  **->**.
+No hay mucha diferencia en vez de usar  **"=>"**  usa  **"->"**.
 
 
 ### Agregar un elemento: Por ejemplo Batman tiene que agarrar al Guasón que tiene su base en el pacifico y necesita un gadget indispensable.
@@ -29,7 +28,7 @@ baticituron.add("Bati repelente contra tiburones")
 ```
 
 ``` kotlin
-var baticituron = new List["Batarang", "Batillaves del batimovil", "Bati celular"]
+val baticituron = mutableListOf("Batarang", "Batillaves del batimovil", "Bati celular")
 baticituron.add("Bati repelente contra tiburones")
 
 [Batarang, Batillaves del batimovil, Bati celular, Bati repelente contra tiburones]
@@ -37,7 +36,6 @@ baticituron.add("Bati repelente contra tiburones")
 
 Ojo al tejo, tambien podes agregarlo donde quieras pasandole un posicion.
 ``` kotlin
-var baticituron = new List["Batarang", "Batillaves del batimovil", "Bati celular"]
 baticituron.add(1, "Bati repelente contra tiburones")
 
 [Batarang, Bati repelente contra tiburones, Batillaves del batimovil, Bati celular]
@@ -55,6 +53,19 @@ o tambien si a Ash se le ocurre bochar al primer integrante de su equipo podemos
 ``` kotlin
 equipo.removeAt(0) //Acordate que el indice de las listas siempre empieza en 0.
 ```
+
+## Mensajes iguales: 
+- ``clear()``  Para borrar todos elementos de la lista.
+- ```size``` Devuelve el  tamaño de la lista.
+- ```isEmpty()``` Pregunta si esta vacia.
+- ```contains(element)``` Pregunta contiene un elemento por parametro.
+- ```max()``` Devuelve el valor maximo. Por ende tambien ```min()``` que hace lo mismo pero al reves.
+- ```sum()``` Suma valores de los elemntos.
+- ```any({elemento -> elemento condicion})``` Pregunta si algun elemento de la coleccion cumple una condicion.
+- ```all({elemento -> elemento condicion})``` Pregunta si todos elementos de la coleccion cumplen una condicion.
+- ```find({elemento -> elemento condicion})``` Devulve un elemento que haya cumplido una condicion.
+- ```first()``` Devuelve el primer elemento de una coleccion, contrario a esto ```last()``` devuelve el ultimo, peeero tambien se puede usar  ```get(posicion)``` y que devuelva el elemento en ese lugar
+
 
 
 
