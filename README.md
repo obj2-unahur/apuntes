@@ -65,7 +65,7 @@ avesAmigas.remove(exAmigo)
 - ```isEmpty()``` Pregunta si está vacía.
 - ```contains(element)``` Pregunta contiene un elemento por parámetro.
 - ```max()``` Devuelve el valor máximo. Por ende también ```min()``` que hace lo mismo pero al revés.
-- ```sum()``` Suma valores de los elementos.
+- ```sum()``` Suma valores de los elementos. Acá pasa algo parecido cómo con ```size```. La sintaxis es casi identica, pero en vez de ```sum()``` es ```sumBy()```.
 - ```any({elemento -> elemento condición})``` Pregunta si algún elemento de la colección cumple una condición.
 - ```all({elemento -> elemento condición})``` Pregunta si todos elementos de la colección cumplen una condición.
 - ```find({elemento -> elemento condición})``` Devuelve un elemento que haya cumplido una condición.
