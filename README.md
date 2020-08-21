@@ -21,6 +21,7 @@ Afortunadamente Kotlin _infiere_ la mayoría de los tipos, siendo necesario escr
 Veamos un ejemplo de definiciones equivalentes en `Wollok` y `Kotlin`:
 
 ```wollok
+/* Wollok */
 class Ave {
   var property energia
   const property direccion
@@ -44,6 +45,7 @@ class Ave {
 ```
 
 ```kotlin
+/* Kotlin */
 class Ave(var energia: Int, val direccion: String) { 
   val amiguis = mutableListOf<Ave>()
 
@@ -73,10 +75,12 @@ Algunas diferencias:
 Continuando con el ejemplo anterior, así se crean objetos en uno y otro lenguaje:
 
 ```wollok
+/* Wollok */
 const pepita = new Ave(energia = 5, direccion = "Wallaby 42, Sidney")
 ```
 
 ```kotlin
+/* Kotlin */
 val pepita = Ave(energia = 5, direccion = "Wallaby 42, Sidney")
 
 // También vale no poner los nombres de los atributos, en ese caso lo que importa es el orden.
@@ -96,6 +100,7 @@ En Kotlin, todas las colecciones vienen en dos "sabores": mutables e inmutables.
 Veamos entonces cómo crear unas y otras:
 
 ```kotlin
+/* Kotlin */
 listOf(1, 2, 3)
 mutableListOf(1, 2, 3)
 
@@ -110,10 +115,12 @@ mutableSetOf(pepita, anastasia)
 Hay una pequeña diferencia en cómo se escriben los _closures_ que utilizamos para las operaciones de orden superior:
 
 ```wollok
+/* Wollok */
 avesAmigas.any { aveAmiga => aveAmiga.esPopular() } 
 ```
 
 ```kotlin
+/* Kotlin */
 avesAmigas.any { aveAmiga -> aveAmiga.esPopular() } 
 ```
 
@@ -148,7 +155,13 @@ Cualquiera de las dos formas es válida.
 - `min()` devuelve el valor mínimo.
 - `sum()` devuelve la suma de los elementos.
 
-**Exclusivos de las colecciones mutables:**
+**Exclusivos para colecciones mutables:**
 - `clear()` borra todos los elementos de la colección.
 - `add(elemento)` agrega el elemento a la colección.
 - `remove(elemento)` borra el elemento de la colección.
+
+**Exclusivos para listas:**
+- `toSet()` devuelve un conjunto con los elementos _únicos_ de la lista. O dicho de otra manera: los elementos que tenía la lista, omitiendo repetidos.
+
+**Exclusivos para conjuntos:**
+- `toList()` devuelve una lista con los mismos elementos que tenga el conjunto.
