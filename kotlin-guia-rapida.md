@@ -136,7 +136,7 @@ Cualquiera de las dos formas es válida.
 
 ### Operaciones comunes sobre colecciones
 
-Un muy pequeño resumen de las operaciones más comunes. Una lista extensísima de todos los métodos que existen se pueden ver en [la documentación oficial de `Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/);
+Un muy pequeño resumen de las operaciones más comunes. Una lista extensísima de todos los métodos que existen se pueden ver en [la documentación oficial de `Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/).
 
 #### Básicas
 - `size` devuelve el tamaño de la colección. Ojo que es un atributo y no un método, por eso va sin parentesis.
