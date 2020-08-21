@@ -136,32 +136,36 @@ Cualquiera de las dos formas es válida.
 
 ### Operaciones comunes sobre colecciones
 
-**Básicas**
+Un muy pequeño resumen de las operaciones más comunes. Una lista extensísima de todos los métodos que existen se pueden ver en [la documentación oficial de `Collection`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/);
+
+#### Básicas
 - `size` devuelve el tamaño de la colección. Ojo que es un atributo y no un método, por eso va sin parentesis.
 - `isEmpty()` pregunta si la colección está vacía.
 - `last()` devuelve el último elemento.
 - `first()` devuelve el primer elemento. 
 - `contains(elemento)` verifica si la colección contiene a un cierto elemento.
 
-**Orden superior**
+#### Orden superior
 - `any { condición }` pregunta si algún elemento de la colección cumple una condición.
 - `all { condición }` pregunta si todos los elementos de la colección cumplen una condición.
 - `find { condición }` devuelve el primer elemento que cumpla con la condición.
 - `sumBy { transformación }` devuelve la suma de los elementos, aplicando la `transformación` sobre cada uno de ellos. Ejemplo: `aves.sumBy { it.energia }`. La `transformación` recibe un elemento y debe devolver un número.
 - `minBy { transformación }` devuelve el elemento que resulta menor al aplicar la `transformación`. Notar que devuelve el elemento original y **no** el resultado de la transformación.
 
-**Exclusivos para colecciones de números:**
+Están también los clásicos `map`, `filter`, `reduce` y muchísimos métodos más.
+
+#### Exclusivos para colecciones de números
 - `max()` devuelve el valor máximo. 
 - `min()` devuelve el valor mínimo.
 - `sum()` devuelve la suma de los elementos.
 
-**Exclusivos para colecciones mutables:**
+#### Exclusivos para colecciones mutables
 - `clear()` borra todos los elementos de la colección.
 - `add(elemento)` agrega el elemento a la colección.
 - `remove(elemento)` borra el elemento de la colección.
 
-**Exclusivos para listas:**
+#### Exclusivos para listas
 - `toSet()` devuelve un conjunto con los elementos _únicos_ de la lista. O dicho de otra manera: los elementos que tenía la lista, omitiendo repetidos.
 
-**Exclusivos para conjuntos:**
+#### Exclusivos para conjuntos
 - `toList()` devuelve una lista con los mismos elementos que tenga el conjunto.
