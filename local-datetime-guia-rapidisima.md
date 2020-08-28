@@ -6,12 +6,16 @@ Con `LocalDate` podemos representar una fecha, y con `LocalDateTime` una fecha y
 
 ## Métodos que pueden ser de interés
 
+A continuación, un ejemplo utilizando `LocalDate`: 
+
 ``` kotlin
-// Instancia de LocalDateTime con los valores de la fecha y hora actual del sistema.
-val fechaActual = LocalDateTime.now()
->>> 2020-08-28T 03:16:08
+import java.time.LocalDate
+
+// Instancia de LocalDateTime con los valores de la fecha actual del sistema.
+val fechaActual = LocalDate.now()
+>>> 2020-08-28
   
-// Instancia de LocalDate (sin hora) con valores que recibe por parámetro. 
+// Instancia de LocalDate con valores que recibe por parámetro. 
 // Notar que el orden es de mayor a menor: año, mes, día
 val renunciaDeLaRua = LocalDate.of(2001, 12, 20) 
 >>> 2001-12-20
@@ -23,6 +27,12 @@ fechaActual.isAfter(renunciaDeLaRua)
 // Como arriba, pero al revés.
 fechaActual.isBefore(renunciaDeLaRua)
 >>> false
+```
+
+Exactamente lo mismo podría hacerse con `LocalDateTime`, agregando en la creación los valores de hora, minutos y segundos:
+
+```kotlin
+val inicioAislamientoArgentina = LocalDateTime.of(2020, 3, 20, 0, 0, 0)
 ```
 
 Esto es bien bien básico, pero suficiente para resolver el ejercicio de Servidor Web. Te dejamos la documentación oficial de [`LocalDateTime`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) y la de [`LocalDate`](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html) por si querés chusmear algo más. 
