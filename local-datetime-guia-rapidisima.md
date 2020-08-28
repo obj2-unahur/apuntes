@@ -1,17 +1,25 @@
-# Guía mega exprés sobre Local Date y LocalDateTime
+# Guía mega exprés sobre LocalDate y LocalDateTime
+
 Básicamente son objetos que sirven para represtar una hora y/o fecha respectivamente (Date sólo para fechas y DateTime para fecha y hora).
-## Métodos que pueden ser de interes
+
+## Métodos que pueden ser de interés
+
 ``` kotlin
-val fechaActual = LocalDateTime.now() //Instancia de LocalDateTime con los valores de la fecha y hora actual del sistema.
->>> 2020-08-28T 03:16:08
+// Instancia de LocalDateTime con los valores de la fecha y hora actual del sistema.
+val fechaActual = LocalDateTime.now()
+// >>> 2020-08-28T 03:16:08
   
-val declaracionDeIndependencia = LocalDateTime.of(1816,7,9, 11, 30) //Instancia de LocalDateTime con valores que recibe por parametro.
->>> 1986-07-09T 11:30
+// Instancia de LocalDate (sin hora) con valores que recibe por parámetro.
+val renunciaDeLaRua = LocalDate.of(2001, 12, 20) 
+// >>> 2001-12-20
 
-fechaActual.isAfter(declaracionDeIndependencia) //Devuelve un booleano comparando si una fecha viene despues que otra.
->>> true
+// Devuelve un booleano indicando si la fecha es posterior a la que viene por parámetro.
+fechaActual.isAfter(renunciaDeLaRua) 
+// >>> true
 
-fechaActual.isBefore(declaracionDeIndependencia)  //Cómo arriba pero esto pregunta si fue antes.
->>>false
+// Como arriba, pero al revés.
+fechaActual.isBefore(renunciaDeLaRua)
+// >>> false
 ```
-Con esto ya estarías para hacer el trabajo de esta semana, igual acá te dejo la [documentación oficial](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) por si querés chusmear algo más. 
+
+Con esto ya estarías para hacer el trabajo de la semana 3, igual acá te dejamos la [documentación oficial](https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html) por si querés chusmear algo más. 
