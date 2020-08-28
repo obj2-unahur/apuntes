@@ -11,7 +11,7 @@ A continuación, un ejemplo utilizando `LocalDate`:
 ``` kotlin
 import java.time.LocalDate
 
-// Instancia de LocalDateTime con los valores de la fecha actual del sistema.
+// Instancia de LocalDate con los valores de la fecha actual del sistema.
 val fechaActual = LocalDate.now()
 >>> 2020-08-28
   
@@ -32,6 +32,8 @@ fechaActual.isBefore(renunciaDeLaRua)
 Exactamente lo mismo podría hacerse con `LocalDateTime`, agregando en la creación los valores de hora, minutos y segundos:
 
 ```kotlin
+import java.time.LocalDateTime
+
 val inicioAislamientoArgentina = LocalDateTime.of(2020, 3, 20, 0, 0, 0)
 ```
 
