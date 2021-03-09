@@ -59,3 +59,17 @@ Para correr los tests, pueden ir al archivo `ContadorTest` y darle play.
 :warning: Recordar que para que aparezca ese botón, deben tener instalado el plugin de Kotest:
 
 ![image](https://user-images.githubusercontent.com/1631752/110284531-b6aa6200-7fc0-11eb-9dec-b6a86acab903.png)
+
+## (Opcional) Correr la aplicación en un teléfono real
+
+Para esto, debemos activar el **modo desarrollador** dentro de Android. Esta opción está en las opciones del sistema, dentro de _Acerca del teléfono_. Allí, hay que tocar unas 10 veces en donde dice _Número de compilación_ y aparecerán mensajes como "Estás a <5> pasos de ser desarrollador":
+
+![image](https://user-images.githubusercontent.com/1631752/110411001-8a4a2080-8068-11eb-8b39-b6fadf976eb4.png)
+
+Cuando nos diga que ya somos desarrolladores, aparecerá el menú _Opciones de desarrollador_ dentro de _Sistema_. Ahí deberemos habilitar _Depuración USB_:
+
+![image](https://user-images.githubusercontent.com/1631752/110411585-9682ad80-8069-11eb-929e-aadc4f7dfce0.png)
+
+Una vez hecho esto, ya podemos conectar el dispositivo a la PC. A la izquierda del botón de ejecutar tendremos un dropdown para seleccionar entre el teléfono físico conectado o el emulador:
+
+![image](https://user-images.githubusercontent.com/1631752/110411771-dfd2fd00-8069-11eb-9657-eaf329c9f4e3.png)
